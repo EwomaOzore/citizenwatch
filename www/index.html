@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CitizenWatch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+
+<body>
+    <div id="app">
+        <div id="landing" class="page active">
+            <div id="loginForm" class="form-container">
+                <h1>CitizenWatch</h1> <br>
+                <form>
+                    <input type="email" name="email" placeholder="Email" required />
+                    <input type="password" name="password" placeholder="Password" required />
+                    <br>
+                    <button type="button" onclick="handleLogin()">Login</button>
+                    <br>
+                    <p>or</p>
+                    <br>
+                    <button type="button" onclick="handleSignup()">Create Account</button>
+                </form>
+            </div>
+            <div class="foot">
+                <p>By signing up, you agree to our <a href="">Terms</a>, and <a href="">Privacy Policy</a></p>
+                <p>Already have an account? <a href="#">Log In</a></p>
+            </div>
+        </div>
+
+        <div id="home" class="page">
+            <div class="header">
+                <h1>CitizenWatch</h1>
+            </div>
+            <div class="content">
+                <!-- Your home page content goes here -->
+                <div class="post">
+                    <div class="user-info">
+                        <img src="img/profile_picture.webp" alt="Profile Picture" />
+                        <p>@ User</p>
+                    </div>
+                    <img src="img/post_image.jpg" alt="Post Image" />
+                    <p>Building on Fire</p>
+                    <p>Post description goes here...</p>
+                    <div class="actions">
+                        <i class="far fa-heart"> 550</i>
+                        <i class="far fa-comment"> 25</i>
+                        <i class="fas fa-share"></i>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="user-info">
+                        <img src="img/profile_picture.webp" alt="Profile Picture" />
+                        <p>@ User</p>
+                    </div>
+                    <img src="img/Police-Brutality.webp" alt="Post Image" />
+                    <p>Police Brutality</p>
+                    <p>Post description goes here...</p>
+                    <div class="actions">
+                        <i class="far fa-heart"> 360</i>
+                        <i class="far fa-comment"> 12</i>
+                        <i class="fas fa-share"></i>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="user-info">
+                        <img src="img/profile_picture.webp" alt="Profile Picture" />
+                        <p>@ User</p>
+                    </div>
+                    <img src="img/Traffic.jpg" alt="Post Image" />
+                    <p>Traffic</p>
+                    <p>Post description goes here...</p>
+                    <div class="actions">
+                        <i class="far fa-heart"> 100</i>
+                        <i class="far fa-comment"> 50</i>
+                        <i class="fas fa-share"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="posts" class="page">
+            <div class="header">
+                <h1>Search</h1>
+            </div>
+            <div class="header">
+                <input type="search" name="search" id="" placeholder="Search">
+            </div>
+            <div class="content">
+                <h2>Trending...</h2>
+                <div class="trending">
+                    <p>Lagos</p>
+                    <p>Abuja</p>
+                    <p>Rivers</p>
+                    <p>Akwa-Ibom</p>
+                    <p>Cross-River</p>
+                    <p>Delta</p>
+                    <p>Lagos</p>
+                    <p>Oyo</p>
+                    <p>Kaduna</p>
+                    <p>Imo</p>
+                    <p>Enugu</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="upload" class="page">
+            <div class="header">
+                <h1>Upload</h1>
+            </div>
+            <div class="content">
+                <div class="upload-form">
+                    <input type="file" id="fileInput" accept="image/*, video/*" /> <br>
+                    <label for="fileInput" class="upload-label">
+                        <i class="fas fa-cloud-upload-alt"></i> Upload File
+                    </label><br>
+                    <textarea rows="4" placeholder="Description..."></textarea> <br>
+                    <input type="text" placeholder="Time" /> <br>
+                    <input type="text" placeholder="Location" /> <br>
+                    <button class="submit-btn" onclick="uploadFile()">Post</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="profile" class="page">
+            <div class="header">
+                <h1>Profile</h1>
+            </div>
+            <div class="content">
+                <div class="profile-info">
+                    <img src="img/profile_picture.webp" alt="Profile Picture" />
+                    <h2>John Doe</h2>
+                    <h3>@John_doe</h3>
+                </div>
+                <div class="profile-btn">
+                    <button>Edit Profile</button>
+                    <button>Edit Profile</button>
+                </div>
+                <div class="posts">
+                    <h3>My Posts</h3>
+                    <!-- User's posts will be displayed here -->
+                    <div class="post">
+                        <img src="img/post_image.jpg" alt="Post Image" />
+                        <p>Post description goes here...</p>
+                        <div class="actions">
+                            <i class="far fa-heart"></i>
+                            <i class="far fa-comment"></i>
+                            <i class="fas fa-share"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="settings" class="page">
+            <div class="header">
+                <h1>Settings and Privacy</h1>
+            </div>
+            <h2>Account</h2>
+            <div class="settings-content">
+                <a href="#" class="tab-link">
+                    <i class="fa-solid fa-user"></i>
+                    <p>Account</p>
+                </a> <br>
+                <a href="#" class="tab-link">
+                    <i class="fa-solid fa-lock"></i>
+                    <p>Privacy</p>
+                </a> <br>
+                <a href="#" class="tab-link">
+                    <i class="fa-solid fa-shield"></i>
+                    <p>Security</p>
+                </a>
+            </div>
+            <h2>Content and Display</h2>
+            <div class="settings-content">
+                <a href="#" class="tab-link">
+                    <i class="fa-solid fa-bell"></i>
+                    <p>Notifications</p>
+                </a> <br>
+                <a href="#" class="tab-link">
+                    <i class="fa-solid fa-video"></i>
+                    <p>Preferences</p>
+                </a> <br>
+                <a href="#" class="tab-link">
+                    <i class="fa-solid fa-bullhorn"></i>
+                    <p>Ads</p>
+                </a> <br>
+                <a href="#" class="tab-link">
+                    <i class="fa-solid fa-language"></i>
+                    <p>Languages</p>
+                </a>
+            </div>
+            <h2>Support and About</h2>
+            <div class="settings-content">
+                <a href="#" class="tab-link">
+                    <i class="fa-solid fa-flag"></i>
+                    <p>Report a problem</p>
+                </a> <br>
+                <a href="#" class="tab-link">
+                    <i class="fa-solid fa-message"></i>
+                    <p>Support</p>
+                </a> <br>
+                <a href="#" class="tab-link">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <p>Terms and Conditions</p>
+                </a>
+            </div>
+            <div class="dark-mode-toggle">
+                <p>Dark Mode</p>
+                <label class="switch">
+                    <input type="checkbox" id="darkModeToggle" />
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="settings-content">
+                <a href="#" class="logout-btn">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <p>Log out</p>
+                </a>
+            </div>
+        </div>
+
+
+        <div id="bottom-nav">
+            <a href="#" class="nav-item" onclick="navigateTo('home')"><i class="fa-solid fa-house"
+                    style="color: #000000;"></i></a>
+            <a href="#" class="nav-item" onclick="navigateTo('posts')"><i class="fa-solid fa-magnifying-glass"
+                    style="color: #000000;"></i></a>
+            <a href="#" class="nav-item" onclick="navigateTo('upload')"><i class="fa-solid fa-plus"
+                    style="color: #000000;"></i></a>
+            <a href="#" class="nav-item" onclick="navigateTo('profile')"><i class="fa-solid fa-user"
+                    style="color: #000000;"></i></a>
+            <a href="#" class="nav-item" onclick="navigateTo('settings')"><i class="fa-solid fa-gear"
+                    style="color: #000000;"></i></a>
+        </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

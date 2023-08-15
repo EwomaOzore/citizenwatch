@@ -1,0 +1,323 @@
+body,
+h1,
+h2,
+h3,
+p,
+input,
+textarea,
+button {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: white; /* Set the default background color */
+  color: #333; /* Set the default text color */
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: contents;
+}
+
+#loginForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 50%;
+}
+
+.form-container input {
+  width: 70%;
+  margin-bottom: 30px;
+  border-radius: 15px;
+}
+
+.form-container button {
+  border-radius: 15px;
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 85%;
+}
+
+.form {
+  margin-left: 17%;
+  margin-bottom: 20px;
+}
+
+.foot {
+  margin-top: 40%;
+  margin-left: 8%;
+}
+
+.foot p {
+  color: #000;
+}
+
+.foot a {
+  text-decoration: none;
+  color: blue;
+}
+
+#home .content {
+  padding: 20px;
+}
+
+#app {
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header h1,
+h2 {
+  margin: 20px;
+  text-align: center;
+}
+
+.header input {
+  width: 80%;
+  padding: 10px;
+  border: 2px solid;
+  border-radius: 10px;
+}
+
+.content h2,
+h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.post {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.trending {
+  margin-left: 5%;
+  margin-right: 5%;
+  line-height: 50px;
+}
+
+.trending p {
+  border: 1px solid rgb(107, 95, 95);
+  border-radius: 10px;
+  padding-left: 15px;
+  margin: 12px;
+}
+
+.user-info {
+  display: flex;
+  padding-bottom: 2%;
+}
+
+.user-info img {
+  border-radius: 50%;
+  width: 10%;
+}
+
+.post img {
+  max-width: 100%;
+}
+
+.post p {
+  padding-left: 3%;
+  padding-top: 2%;
+}
+
+.actions {
+  margin-top: 10px;
+}
+
+.actions i {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+#bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+.nav-item {
+  color: #333;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.dark-mode-toggle {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.dark-mode-toggle p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Dark mode toggle switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #333;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #333;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+.slider.round {
+  border-radius: 20px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.upload-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  line-height: 50px;
+}
+
+.upload-form textarea,
+input,
+button {
+  width: 70%;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+}
+
+.profile-info {
+  margin-bottom: 15px;
+}
+
+.profile-info img {
+  border-radius: 50%;
+  width: 15%;
+  margin-left: 44%;
+}
+
+.profile-btn {
+  text-align: center;
+}
+
+.profile-btn button {
+  padding: 10px;
+  width: 35%;
+  border-radius: 10px;
+}
+
+.settings-content {
+  padding-left: 20px;
+}
+
+.settings-content a {
+  display: flex;
+  color: gray;
+  width: 100%;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+.settings-content p {
+  padding-left: 10px;
+}
+
+.settings-content input {
+  width: 10%;
+}
+
+.settings-content label {
+  font-size: 25px;
+}
+
+.settings-content h2 {
+  margin: 0;
+  text-align: left;
+}
